@@ -1,0 +1,4 @@
+server:
+  port: 9031
+  servlet:
+    context-path: /dev-api
