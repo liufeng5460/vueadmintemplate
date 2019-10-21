@@ -1,4 +1,26 @@
+project-name: minecar
+project-base: D:/tutor/work/矿车/be
+pid-file: ${project-base}/${project-name}.pid
+
 server:
   port: 9031
   servlet:
     context-path: /dev-api
+
+spring:
+  datasource:
+    platform: postgres
+    driver-className: com.mysql.jdbc.Driver
+    url: jdbc:postgresql://localhost:5433/${project-name}?useSSL=false #useUnicode=true&characterEncoding=utf-8&
+    username: minecar
+    password: minecar1516
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    # database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+
+logging:
+  file: ${project-base}/log/${project-name}.log
