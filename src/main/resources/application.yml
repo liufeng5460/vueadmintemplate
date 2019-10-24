@@ -11,8 +11,8 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5433/${project-name}?useSSL=false #useUnicode=true&characterEncoding=utf-8&
     driver-class-name: org.postgresql.Driver
-    username: postgres
-    password: dbroot
+    username: minecar
+    password: minecar1619
     platform: postgresql
   jpa:
     show-sql: true
