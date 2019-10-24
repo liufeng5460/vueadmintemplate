@@ -1,7 +1,6 @@
 package liufeng.minecar.repository;
 
-
-import com.vividsolutions.jts.geom.Geometry;
+import org.geolatte.geom.Point;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -27,8 +26,8 @@ public class TLight implements Serializable {
 	@Column(name = "REMARK")
 	private String remark;
 	
-	@Column(name = "geom", columnDefinition = "geometry(Point,4326)")
-	private Geometry geom;
+	@Column(name = "geom", columnDefinition = "geometry")
+	private Point geom;
 	
 	@Override
 	public String toString() {
