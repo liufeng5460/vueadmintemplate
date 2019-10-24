@@ -1,4 +1,4 @@
-package liufeng.vueadmintemplate;
+package liufeng.minecar;
 
 
 public class User {

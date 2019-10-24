@@ -1,4 +1,4 @@
-package liufeng.vueadmintemplate.util;
+package liufeng.minecar.util;
 
 import java.util.HashMap;
 import java.util.Map;

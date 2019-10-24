@@ -1,4 +1,37 @@
+project-name: minecar
+project-base: D:/tutor/work/矿车/be
+pid-file: ${project-base}/${project-name}.pid
+
 server:
   port: 9031
   servlet:
     context-path: /dev-api
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/${project-name}?useSSL=false #useUnicode=true&characterEncoding=utf-8&
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: dbroot
+    platform: postgresql
+  jpa:
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.spatial.dialect.postgis.PostgisPG9Dialect
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+        dialect: org.hibernate.spatial.dialect.postgis.PostgisPG9Dialect
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: liufeng.minecar.config.CustomeNamingStrategy
+
+logging:
+  file: ${project-base}/log/${project-name}.log
+#  level:
+#    org:
+#      hibernate:
+#        SQL: DEBUG
+#        type: TRACE

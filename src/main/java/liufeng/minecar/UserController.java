@@ -1,6 +1,6 @@
-package liufeng.vueadmintemplate;
+package liufeng.minecar;
 
-import liufeng.vueadmintemplate.util.ResponseUtil;
+import liufeng.minecar.util.ResponseUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
